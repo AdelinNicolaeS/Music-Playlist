@@ -1,0 +1,14 @@
+Citim q din fisier ca fiind numărul de operații ce vor avea loc asupra playlist-ului, dupa care,
+pentru fiecare comanda apelam funcția corespunzătoare implementata in fișierul playlist.c.
+Astfel, funcțiile move_next si move_prev verifica daca se poate muta cursorul in direcția dorita,
+caz in care se realizează acest lucru, sau afișează mesajul de eroare în caz contrar. Cele 4
+funcții de ștergere verifica daca pot șterge argumentul corespunzător, analizând separat cazurile-limita,
+precum: daca lista are 0 elemente (moment in care se afișează mesajul de eroare), daca lista are un 
+element,daca nodul ce urmează sa fie șters conține cursorul, caz in care acesta va fi mutat (daca este
+posibil) sau daca nodul ce trebuie șters este head sau tail. La finalul fiecărei funcții, se eliberează
+memoria nodului eliminat.
+Funcțiile de afișare printeaza la output melodia corespunzătoare sau playlist-ul, dupa caz, in timp ce 
+funcțiile de adăugare tratează separat cazurile limita, dupa care verifica daca melodia ce urmează sa se
+adauge este deja in lista, caz in care e mai intai ștearsă, apoi adăugată din nou. Pentru aceste operații
+am realizat funcția create_node care aloca si initializeaza nodul ce va fi adăugat si funcția free_list ce
+eliberează memoria nodurilor si a listei finale.
